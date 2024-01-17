@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bài 6</title>
+    <link rel="stylesheet" href="bai3.2(b6).css">
+    <style>
+        body{
+    font-family: 'Times New Roman', Times, serif;
+    }
+        section {
+     border: 5px solid white;
+     border-radius: 20px;
+     max-width: 1000px;
+     margin: 20px auto;
+     padding: 20px;
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+     text-align: left;
+     padding-left: 300px;
+     background-color: white;
+    }
+        .purple-text {
+    color: rgb(108, 116, 229);
+    }
+
+        .pink-text {
+    color: rgb(255, 0, 157);
+    }
+
+    .yellow-text {
+    color: rgb(204, 255, 0);
+    }
+
+    .blue-text {
+    color: rgb(0, 30, 255);
+    }
+
+        h1{
+    color:rgb(7, 7, 7);
+    }
+        .col{
+    max-width: 100px;
+    background-coloR: white;
+    }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Các phép toán</h1>
+        <p>Phép cộng
+        <input type="text" id="txt_so1_cong" size="10" required>
+        +
+        <input type="text" id="txt_so2_cong" size="10" required>
+        <button onclick="tinhtong()">=</button>
+        <input type="text" id="txt_ketquatong" size="10" required></p>
+        
+        <p>Phép trừ
+        <input type="text" id="txt_so1_tru" size="10" required>
+        -
+        <input type="text" id="txt_so2_tru" size="10" required>
+        <button onclick="tinhhieu()">=</button>
+        <input type="text" id="txt_ketquahieu" size="10" required></p>
+        
+        <p>Phép nhân
+        <input type="text" id="txt_so1_nhan" size="10" required>
+        *
+        <input type="text" id="txt_so2_nhan" size="10" required>
+        <button onclick="tinhtich()">=</button>
+        <input type="text" id="txt_ketquanhan" size="10" required></p>
+        
+        <p>Phép chia
+        <input type="text" id="txt_so1_chia" size="10" required>
+        /
+        <input type="text" id="txt_so2_chia" size="10" required>
+        <button onclick="tinhthuong()">=</button>
+        <input type="text" id="txt_ketquachia" size="10" required></p>
+        <h4>Các phép toán vừa thực hiện</h4>
+        <table style="1000">
+            <tr>
+                <td>PHÉP CỘNG</td>
+
+                <td>PHÉP TRỪ</td>
+
+                <td>PHÉP NHÂN</td>
+
+                <td>PHÉP CHIA</td>
+            </tr>
+            <tr>
+                <td id="txt_phepcong"></td>
+                <td id="txt_pheptru"></td>
+                <td id="txt_phepnhan"></td>
+                <td id="txt_phepchia"></td>
+            </tr>
+        </table>
+        <script type="text/javascript">
+            function tinhtong() {
+    var so1 = parseFloat(document.getElementById("txt_so1_cong").value);
+    var so2 = parseFloat(document.getElementById("txt_so2_cong").value);
+    var ketqua = so1 + so2;
+    document.getElementById("txt_ketquatong").value = ketqua;
+    var phepcong = so1 + " + " + so2 + " = " + ketqua;
+    document.getElementById("txt_phepcong").textContent = phepcong;
+    document.getElementById("txt_phepcong").classList.add("purple-text");
+}
+
+function tinhhieu() {
+    var so1 = parseFloat(document.getElementById("txt_so1_tru").value);
+    var so2 = parseFloat(document.getElementById("txt_so2_tru").value);
+    var ketqua = so1 - so2;
+    document.getElementById("txt_ketquahieu").value = ketqua;
+    var phepcong = so1 + " - " + so2 + " = " + ketqua;
+    document.getElementById("txt_pheptru").textContent = phepcong;
+    document.getElementById("txt_pheptru").classList.add("yellow-text");
+}
+
+function tinhtich() {
+    var so1 = parseFloat(document.getElementById("txt_so1_nhan").value);
+    var so2 = parseFloat(document.getElementById("txt_so2_nhan").value);
+    var ketqua = so1 * so2;
+    document.getElementById("txt_ketquanhan").value = ketqua;
+    var phepcong = so1 + " * " + so2 + " = " + ketqua;
+    document.getElementById("txt_phepnhan").textContent = phepcong;
+    document.getElementById("txt_phepnhan").classList.add("pink-text");
+}
+
+function tinhthuong() {
+    var so1 = parseFloat(document.getElementById("txt_so1_chia").value);
+    var so2 = parseFloat(document.getElementById("txt_so2_chia").value);
+    var ketqua = so1 / so2;
+    document.getElementById("txt_ketquachia").value = ketqua;
+    var phepcong = so1 + " / " + so2 + " = " + ketqua;
+    document.getElementById("txt_phepchia").textContent = phepcong;
+    document.getElementById("txt_phepchia").classList.add("blue-text");
+}
+        </script>
+    </section>
+</body>
+</html>

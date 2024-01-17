@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo click 2</title>
+        <script type="text/javascript">
+            function hienthianh(dovat){
+                if(dovat=="mu"){
+                    document.write("<img src='mu.jpg'>");
+                }else{
+                    document.write("<img src='tui.jpg'>");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p>Hãy chọn đò vật mà bạn thích:</p>
+        <input type="button" value="Mũ" onclick="hienthianh('mu');"/>
+        <input type="button" value="Túi" onclick="hienthianh('tui');"/>
+    </body>
+</html>

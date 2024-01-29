@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20210903/pngtree-mens-clothing-store-sportswear-shopping-photography-map-with-pictures-image_796890.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        header {
+            background-color: #b44a7e;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+            position: relative;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #427b6c;
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1001;
+            top: 0;
+            left: 0;
+            background-image: url(https://iweb.tatthanh.com.vn/pic/3/blog/web-thoi-trang-nam.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            color: rgb(160, 52, 95);
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: rgb(0, 0, 0);
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #61a6c4;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .main-content {
+            margin-top: 70px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <span id="openSidebar">&#9776; Menu</span>
+            <ul>
+                <li>Trang Chủ</li>
+                <li>Sản phẩm
+                    <ul style="color: black;">
+                        <li>Áo</li>
+                        <li>Cà Vạt</li>
+                        <li>Quần</li>
+                        <li>Mũ</li>
+                    </ul>
+                </li>
+                <li>Liên Hệ</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" id="closeSidebar">&times;</a>
+        <a href="#">Trang Chủ</a>
+        <a href="#">Sản phẩm</a>
+        <a href="#">Bán chạy</a>
+        <a href="#">Thời Trang</a>
+        <a href="#">Giỏ hàng</a>
+        <a href="#">Liên Hệ</a>
+    </div>
+
+    <div class="main-content">
+     
+    </div>
+
+    <script>
+        document.getElementById("openSidebar").addEventListener("click", function() {
+            document.querySelector(".sidebar").style.width = "250px";
+        });
+
+        document.getElementById("closeSidebar").addEventListener("click", function() {
+            document.querySelector(".sidebar").style.width = "0";
+        });
+
+      
+        window.onscroll = function() {
+   
+        };
+    </script>
+
+</body>
+</html>           

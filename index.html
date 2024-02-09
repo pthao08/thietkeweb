@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do Phuong Thao</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aldrich&family=Mulish:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="main">
+      <header id="header" class="">
+        <div class="container">
+          <div class="header-mobile">
+            <a href="./index.html">
+              <p class="logo">Portfolio</p>
+            </a>
+            <i
+              id="mobile-bar"
+              class="fa-solid fa-bars mobile-btn hidden"
+              onclick="handleBarClick()"
+            ></i>
+          </div>
+          <div class="header-menu">
+            <ul class="">
+              <li><a href="/">Home</a></li>
+              <li><a href="#about">About me</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div id="overlay" class="hidden" onclick="handleOverlayClick()"></div>
+      <div id="mobile-menu" class="hidden">
+        <div>
+          <a href="/">
+            <a href="./index.html"> <p class="logo">Portfolio</p> </a
+            ><i
+              id="close-btn"
+              class="fa-solid fa-xmark"
+              onclick="handleCloseBtn()"
+            ></i>
+          </a>
+        </div>
+        <ul>
+          <a><li class="">Home</li></a>
+          <a><li class="">About me</li></a>
+          <a><li class="">Portfolio</li></a>
+          <a><li class="">Contact</li></a>
+        </ul>
+      </div>
+      <a href="#header"
+        ><button id="scrollToTop">
+          <i class="fa-regular fa-circle-up"></i></button
+      ></a>
+      <main>
+        <div class="banner">
+          <div class="container">
+            <div class="banner-content">
+              <div class="banner-socials">
+                <a
+                  href="https://github.com/pthao08/thietkeweb"
+                  class="banner-link"
+                  target="_blank"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100086247401606"
+                  class="banner-link"
+                  target="_blank"
+                  ><i class="fa-brands fa-facebook"></i></a
+                ><a
+                  href="https://www.instagram.com/dp_thao25/"
+                  class="banner-link"
+                  target="_blank"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a
+                  href="https://twitter.com/wearelloud"
+                  class="banner-link"
+                  target="_blank"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+              </div>
+              <div class="banner-info">
+                <div class="banner-hi">Hi, I'm Thao</div>
+                <p class="banner-introduce">Frontend Developer</p>
+                <p class="banner-desc">
+                  I hope to become a Frontend programmer in the future and build
+                  websites with high quality and aesthetics.
+                </p>
+                <button class="banner-btn smooth-scroll">
+                  <a href="#contact"
+                    >CONTACT ME<i class="fa-solid fa-caret-right"></i
+                  ></a>
+                </button>
+              </div>
+            </div>
+            <img src="ava-banner.jpg" alt="Thao" class="banner-img" />
+          </div>
+        </div>
+        <br />
+        <div id="about" class="about-wrapper smooth-scroll">
+          <div class="container">
+            <p class="about-heading">About Me</p>
+            <p class="about-sub">My Introduction</p>
+            <div class="about">
+              <div>
+                <img src="ava.jpg" alt="" class="about-img" />
+              </div>
+              <div>
+                <p class="about-desc">
+                  I look forward to working in a professional environment to
+                  create, design, and apply the latest web technologies to
+                  create global, useful and easy-to-use websites for users.
+                </p>
+                <div class="about-info">
+                  <div>
+                    <p class="about-info-numb">02 +</p>
+                    <p class="about-info-desc">Years experience</p>
+                  </div>
+                  <div>
+                    <p class="about-info-numb">20 +</p>
+                    <p class="about-info-desc">Completed projects</p>
+                  </div>
+                  <div>
+                    <p class="about-info-numb">05 +</p>
+                    <p class="about-info-desc">Companies worked</p>
+                  </div>
+                </div>
+                <button class="about-btn smooth-scroll">
+                  <a href="#contact"
+                    >CONTACT ME<i class="fa-solid fa-caret-right"></i
+                  ></a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <div>
+                <img src="ava-banner.jpg" alt="" class="modal-img" />
+                <p>UX & UI Design</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="portfolio" class="portfolio">
+            <p class="portfolio-heading">Portfolio of Work</p>
+            <p class="portfolio-sub">
+              I am committed to bringing the best service to you
+            </p>
+            <div class="portfolio-list">
+              <a
+                href="https://dophgthao08.000webhostapp.com/Web%20design/Buoi%201/"
+              >
+                <img src="lesson.jpg" alt="" class="portfolio-img" />
+                <div>
+                  <span>Buổi 1</span>
+                  <button>
+                    Read more <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </a>
+              <a
+                href="https://dophgthao08.000webhostapp.com/Web%20design/Buoi%202/"
+              >
+                <img src="lesson.jpg" alt="" class="portfolio-img" />
+                <div>
+                  <span>Buổi 2</span>
+                  <button>
+                    Read more <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </a>
+              <a
+                href="https://dophgthao08.000webhostapp.com/Web%20design/Buoi%203/"
+              >
+                <img src="lesson.jpg" alt="" class="portfolio-img" />
+                <div>
+                  <span>Buổi 3</span>
+                  <button>
+                    Read more <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </a>
+              <a
+                href="https://dophgthao08.000webhostapp.com/Web%20design/Buoi%204/"
+              >
+                <img src="lesson.jpg" alt="" class="portfolio-img" />
+                <div>
+                  <span>Buổi 4</span>
+                  <button>
+                    Read more <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </a>
+              <a
+                href="https://dophgthao08.000webhostapp.com/Web%20design/Buoi%205/"
+              >
+                <img src="lesson.jpg" alt="" class="portfolio-img" />
+                <div>
+                  <span>Buổi 5</span>
+                  <button>
+                    Read more <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </a>
+              <a
+                href="https://dophgthao08.000webhostapp.com/Web%20design/Buoi%206/"
+              >
+                <img src="lesson.jpg" alt="" class="portfolio-img" />
+                <div>
+                  <span>Buổi 6</span>
+                  <button>
+                    Read more <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </a>
+              <a
+                href="https://dophgthao08.000webhostapp.com/Web%20design/Buoi%207/"
+              >
+                <img src="lesson.jpg" alt="" class="portfolio-img" />
+                <div>
+                  <span>Buổi 7</span>
+                  <button>
+                    Read more <i class="fa-solid fa-arrow-right"></i>
+                  </button>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="services">
+          <div class="container">
+            <p class="services-heading">SERVICES</p>
+            <p class="services-sub">
+              This is My Expertise, The Services I'll Provide My Clients
+            </p>
+            <div class="carousel-container">
+              <div class="service-carousel">
+                <div class="track">
+                  <div class="card-container">
+                    <div class="card">
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/512/954/954548.png"
+                        alt=""
+                      />
+                      <p>Web Design</p>
+                    </div>
+                  </div>
+                  <div class="card-container">
+                    <div class="card">
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/512/8448/8448634.png"
+                        alt=""
+                      />
+                      <p>UX-UI</p>
+                    </div>
+                  </div>
+                  <div class="card-container">
+                    <div class="card">
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/512/732/732212.png"
+                        alt=""
+                      />
+                      <p>HTML</p>
+                    </div>
+                  </div>
+                  <div class="card-container">
+                    <div class="card">
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/512/732/732190.png"
+                        alt=""
+                      />
+                      <p>CSS</p>
+                    </div>
+                  </div>
+                  <div class="card-container">
+                    <div class="card">
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+                        alt=""
+                      />
+                      <p>JavaScript</p>
+                    </div>
+                  </div>
+                  <div class="card-container">
+                    <div class="card">
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/512/732/732190.png"
+                        alt=""
+                      />
+                      <p>CSS</p>
+                    </div>
+                  </div>
+                  <div class="card-container">
+                    <div class="card">
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/512/226/226777.png"
+                        alt=""
+                      />
+                      <p>Java</p>
+                    </div>
+                  </div>
+                  <div class="card-container">
+                    <div class="card">
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/512/5968/5968520.png"
+                        alt=""
+                      />
+                      <p>Photoshop</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="nav">
+                  <button class="prev">
+                    <i class="fas fa-arrow-left fa-2x"></i>
+                  </button>
+                  <button class="next">
+                    <i class="fas fa-arrow-right fa-2x"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-banner">
+          <div class="container">
+            <div>
+              <p class="contact-banner-heading">
+                Contact me now and get a 30% discount on your new project
+              </p>
+              <p class="contact-banner-sub">
+                Quality goes hand in hand with price
+              </p>
+              <button class="contact-banner-btn">
+                <a href="#contact"
+                  >CONTACT ME<i class="fa-solid fa-caret-right"></i
+                ></a>
+              </button>
+            </div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/9414/9414296.png"
+              alt=""
+              class="contact-banner-img"
+            />
+          </div>
+        </div>
+        <div class="testimonials">
+          <div class="container">
+            <p class="testimonials-heading">TESTIMONIALS</p>
+            <p class="testimonials-sub">
+              What do customers say about my service?
+            </p>
+            <div class="testimonials-list">
+              <div>
+                <div class="testimonials-top">
+                  <div>
+                    <img
+                      src="https://vtv1.mediacdn.vn/zoom/640_400/562122370168008704/2023/5/9/photo1683602630016-1683602630141546341462.jpg"
+                      alt=""
+                      class="testimonials-item-img"
+                    />
+                    <div>
+                      <p class="testimonials-item-name">Mr.Weeknd</p>
+                      <p class="testimonials-item-sub">Disney</p>
+                    </div>
+                  </div>
+                  <div class="testimonials-stars">
+                    <i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <p class="testimonials-desc">
+                  I really like Thao's way of working. Work professionally and
+                  carefully. The agreed price is very reasonable.
+                </p>
+              </div>
+              <div>
+                <div class="testimonials-top">
+                  <div>
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg"
+                      alt=""
+                      class="testimonials-item-img"
+                    />
+                    <div>
+                      <p class="testimonials-item-name">Mr.Mark</p>
+                      <p class="testimonials-item-sub">Amazon</p>
+                    </div>
+                  </div>
+                  <div class="testimonials-stars">
+                    <i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <p class="testimonials-desc">
+                  I really like Thao's way of working. Work professionally and
+                  carefully. The agreed price is very reasonable.
+                </p>
+              </div>
+              <div>
+                <div class="testimonials-top">
+                  <div>
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/9/99/Elon_Musk_Colorado_2022_%28cropped2%29.jpg"
+                      alt=""
+                      class="testimonials-item-img"
+                    />
+                    <div>
+                      <p class="testimonials-item-name">Mr.Elon</p>
+                      <p class="testimonials-item-sub">Apple</p>
+                    </div>
+                  </div>
+                  <div class="testimonials-stars">
+                    <i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <p class="testimonials-desc">
+                  I really like Thao's way of working. Work professionally and
+                  carefully. The agreed price is very reasonable.
+                </p>
+              </div>
+              <div>
+                <div class="testimonials-top">
+                  <div>
+                    <img
+                      src="https://m.media-amazon.com/images/M/MV5BOWRiMzRlZGUtNjA1Zi00OGJlLTg3Y2QtYjQ3MDNhOTQ1OWVjXkEyXkFqcGdeQXVyODY0NzcxNw@@._V1_FMjpg_UX1000_.jpg"
+                      alt=""
+                      class="testimonials-item-img"
+                    />
+                    <div>
+                      <p class="testimonials-item-name">Mrs.Lipa</p>
+                      <p class="testimonials-item-sub">Tesla</p>
+                    </div>
+                  </div>
+                  <div class="testimonials-stars">
+                    <i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i
+                    ><i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <p class="testimonials-desc">
+                  I really like Thao's way of working. Work professionally and
+                  carefully. The agreed price is very reasonable.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="contact" class="contact-wrapper">
+          <div class="container">
+            <p class="portfolio-heading">Contact Me</p>
+            <p class="portfolio-sub">Send your info</p>
+            <div class="contact">
+              <div class="contact-info">
+                <div>
+                  <i class="fa-solid fa-phone"></i>
+                  <div>
+                    <p class="contact-info-heading">Call Me</p>
+                    <p class="contact-info-sub">+84 325 755910</p>
+                  </div>
+                </div>
+                <div>
+                  <i class="fa-regular fa-envelope"></i>
+                  <div>
+                    <p class="contact-info-heading">Email</p>
+                    <p class="contact-info-sub">phgthao2508@gmail.com</p>
+                  </div>
+                </div>
+                <div>
+                  <i class="fa-solid fa-location-dot"></i>
+                  <div>
+                    <p class="contact-info-heading">Location</p>
+                    <p class="contact-info-sub">
+                      58 Nguyễn Khánh Toàn, Quan Hoa, Cầu Giấy
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-main">
+                <form id="contact-form">
+                  <div class="form-first">
+                    <input
+                      type="text"
+                      id="input1"
+                      name="input1"
+                      placeholder="Name"
+                      class="form-name"
+                    />
+                    <input
+                      type="text"
+                      id="input2"
+                      name="input2"
+                      placeholder="Phone"
+                      class="form-phone"
+                    />
+                  </div>
+                  <input
+                    type="text"
+                    id="input3"
+                    placeholder="Email"
+                    class="form-email"
+                  />
+                  <textarea
+                    type="text"
+                    id="input4"
+                    placeholder="Message"
+                    class="form-message"
+                    rows="4"
+                  ></textarea>
+                  <button class="form-btn" type="submit">SEND</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <div class="container">
+            <div class="footer-info">
+              <p class="footer-name">Do Phuong Thao</p>
+              <p class="footer-desc">Contact me anytime.</p>
+            </div>
+            <div class="footer-menu">
+              <p>About</p>
+              <p>Portfolio</p>
+              <p>Contact</p>
+            </div>
+            <ul class="footer-socials">
+              <li>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100086247401606"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://x.com/wearelloud?s=21"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/dp_thao25/"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <p class="footer-copyright">© Copyright 2024 - Do Phuong Thao.</p>
+        </footer>
+      </main>
+    </div>
+    <script src="js/main.js"></script>
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName('mySlides');
+        let dots = document.getElementsByClassName('dot');
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = 'none';
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(' active', '');
+        }
+        slides[slideIndex - 1].style.display = 'block';
+        dots[slideIndex - 1].className += ' active';
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var smoothScrollLinks = document.querySelectorAll('.smooth-scroll');
+
+        for (var i = 0; i < smoothScrollLinks.length; i++) {
+          smoothScrollLinks[i].addEventListener('click', function (event) {
+            event.preventDefault();
+            var targetId = this.getAttribute('href');
+            var targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+              });
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
